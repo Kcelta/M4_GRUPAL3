@@ -1,3 +1,8 @@
+//Data Table
+$(document).ready( function () {
+  $("#myTable").DataTable();
+} );
+
 class Empresa {
   #idRegistro;
   #nombre;
@@ -170,7 +175,8 @@ function mostrarEmpresas() {
       <p>ID Registro: ${empresa.getIdRegistro()}</p>
       <p>RUT: ${empresa.getRut()}</p>
       <p>Tamaño: ${empresa.getTamano()}</p>
-      <table class="table table-striped">
+      <div class="table-responsive">
+      <table class="table table-secondary table-hover cell-border compact stripe" id="myTable">
         <thead>
           <tr>
             <th>ID Importación</th>
@@ -187,6 +193,7 @@ function mostrarEmpresas() {
         <tfoot id="totales-${empresa.getNombre()}">
         </tfoot>
       </table>
+      </div>
       <button class="btn btn-primary btn-mostrar-totales" data-empresa="${empresa.getNombre()}">Mostrar Totales</button>
     </div>`;
 
