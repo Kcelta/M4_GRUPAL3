@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Importaciones</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/aduana.png" alt="aduana" width="60" height="44">
+      </a>
+    </div>
+</nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Registro de Empresas e Importaciones</h1>
+
+        <div class="mb-4">
+            <h2>Agregar Empresa</h2>
+            <div class="form-group">
+                <input type="text" id="idRegistro" class="form-control" placeholder="ID Registro">
+            </div>
+            <div class="form-group">
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre Empresa">
+            </div>
+            <div class="form-group">
+                <input type="text" id="rut" class="form-control" placeholder="RUT">
+            </div>
+            <div class="form-group">
+                <select id="tamanoEmpresa" class="form-control">
+                    <option value="">Seleccione un tamaño</option>
+                    <option value="grande">Grande</option>
+                    <option value="mediana">Mediana</option>
+                    <option value="pequeña">Pequeña</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="btnAgregarEmpresa">Agregar Empresa</button>
+        </div>
+
+        <div class="mb-4">
+            <h2>Agregar Importación</h2>
+            <div class="form-group">
+                <input type="number" id="idImportacion" class="form-control" placeholder="ID Importación">
+            </div>
+            <div class="form-group">
+                <input type="text" id="producto" class="form-control" placeholder="Producto">
+            </div>
+            <div class="form-group">
+                <input type="number" id="numeroProductos" class="form-control" placeholder="Número de Productos">
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" id="precioUnitario" class="form-control" placeholder="Precio Unitario">
+            </div>
+            <div class="form-group">
+                <label for="nombreEmpresa">Nombre Empresa</label>
+                <select id="nombreEmpresa" class="form-control">
+                    <option value="">Seleccione una empresa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rubro">Rubro:</label>
+                <select id="rubro" class="form-control">
+                    <option value="">Seleccione un rubro</option>
+                    <option value="Cereales y productos de cereales">Cereales y productos de cereales</option>
+                    <option value="Frutas, verduras y frutos secos">Frutas, verduras y frutos secos</option>
+                    <option value="Productos de panadería y confitería">Productos de panadería y confitería</option>
+                    <option value="Bebidas alcohólicas y no alcohólicas">Bebidas alcohólicas y no alcohólicas</option>
+                    <option value="Maquinaria y equipos mecánicos">Maquinaria y equipos mecánicos</option>
+                    <option value="Aparatos eléctricos y electrónicos">Aparatos eléctricos y electrónicos</option>
+                    <option value="Vehículos y partes de vehículos">Vehículos y partes de vehículos</option>
+                    <option value="Productos químicos y farmacéuticos">Productos químicos y farmacéuticos</option>
+                    <option value="Telas y tejidos">Telas y tejidos</option>
+                    <option value="Ropa y accesorios de vestuario">Ropa y accesorios de vestuario</option>
+                    <option value="Calzado y artículos de cuero">Calzado y artículos de cuero</option>
+                    <option value="Cemento, yeso y productos similares">Cemento, yeso y productos similares</option>
+                    <option value="Maderas y productos derivados">Maderas y productos derivados</option>
+                    <option value="Cerámicas y vidrios">Cerámicas y vidrios</option>
+                    <option value="Minerales metálicos y no metálicos">Minerales metálicos y no metálicos</option>
+                    <option value="Productos de extracción minera">Productos de extracción minera</option>
+                    <option value="Plásticos en formas primarias">Plásticos en formas primarias</option>
+                    <option value="Productos de caucho y sus derivados">Productos de caucho y sus derivados</option>
+                    <option value="Juguetes y artículos de recreo">Juguetes y artículos de recreo</option>
+                    <option value="Instrumentos musicales">Instrumentos musicales</option>
+                    <option value="Artículos de oficina y papelería">Artículos de oficina y papelería</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="btnAgregarImportacion">Agregar Importación</button>
+        </div>
+
+        <div id="sectionEmpresas"></div>
+    </div>
+    <footer class="container-fluid text-center">
+      <p>&copy; GRUPO 1 - 2024 </p>
+      <p>Kevin Henriquez | Hernán Medina | Camila Palma | Bayron Sepulveda</p>
+  </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
